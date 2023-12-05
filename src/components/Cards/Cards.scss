@@ -126,8 +126,9 @@
     font-size: $font-size-title;
     font-weight: 700;
   }
-  .input-modal-info{
+  .input-modal-label{
     margin-top: 16px;
+    display: block;
   }
   input {
     width: 100%;

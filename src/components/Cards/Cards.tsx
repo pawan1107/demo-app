@@ -92,8 +92,15 @@ const AddNewCard = () => {
   const onOpenModal = () => setOpen(true);
   const onCloseModal = () => setOpen(false);
   const [name, setName] = useState('')
+  const inputRef = useRef<HTMLInputElement>(null);
 
   const addCard = () => {
+    if (name.length < 3) {
+      inputRef.current?.setCustomValidity('Name must be more than 3 characters.');
+      inputRef.current?.reportValidity();
+      return;
+    }
+    inputRef.current?.setCustomValidity('');
     const number = random4DigitNumber() + random4DigitNumber() + random4DigitNumber() + random4DigitNumber();
     const newCardDetails = {
       name,
@@ -117,8 +124,10 @@ const AddNewCard = () => {
     <Modal open={open} onClose={onCloseModal} center>
       <div className='input-modal'>
         <span className='input-modal-header'>Create New Card</span>
-        <div className='input-modal-info'>Enter Your Name</div>
+        <label  className='input-modal-label'>Enter Your Name</label >
         <input
+          ref={inputRef}
+          required
           autoFocus
           id="name"
           type="text"
