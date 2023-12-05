@@ -169,7 +169,7 @@ const CardsSection = () => {
           <CardSlider />
         </SectionList>
       </div>
-      <PageDetailMobile className='page-detail' style={{ top: `${(offestTop || 0) + 41}px`}}>
+      <PageDetailMobile className='page-detail' style={{ top: `${(offestTop || 0) + 50}px`}}>
         <div className='actions-header'>
             <ActionButton onClick={freezeCard}>
               <FreezeCardIcon />
