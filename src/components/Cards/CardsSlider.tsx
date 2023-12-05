@@ -11,8 +11,11 @@ const SLIDER_SETTING =  {
   infinite: false,
   arrows: false,
   speed: 500,
-  slidesToShow: 1.1,
+  slidesToShow: 1,
   slidesToScroll: 1,
+  className: "center",
+  centerMode: true,
+  centerPadding: "16px",
   
 };
 
