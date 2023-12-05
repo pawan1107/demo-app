@@ -1,0 +1,146 @@
+@import '../../colors.scss';
+@import '../../styles.scss';
+
+.cards-section {
+  width: 100%;
+  position: fixed;
+  padding-bottom: 48px;
+  .slick-list{padding:0 9px 0 0 !important;}
+
+  .cards-section-header{
+    padding: 16px 24px;
+    display: flex;
+    justify-content: space-between;
+
+    .account-balance {
+      .account-balance-name {
+        font-size: $font-size-text-label-medium;
+        font-weight: 600;
+      }
+      .account-balance-money{
+        margin-top: 9px;
+        display: flex;
+        align-items: center;
+
+        .account-balance-symbol {
+          background-color: $color-primary;
+          font-size: $font-size-text-label-small;
+          font-weight: 700;
+          width: 40px;
+          height: 22px;
+          border-radius: 4px;
+          margin-right: 10px;
+          text-align: center;
+          line-height: 22px;
+        }
+        .account-balance-amount {
+          font-size: $font-size-title-large;
+          font-weight: 700;
+        }
+      }
+    }
+
+    .new-card-btn {
+      height: fit-content;
+      align-self: flex-end;
+      .plus-circle-icon {
+        margin-right: 4px;
+        fill: $buttons-secondary;
+        .a {
+          fill: rgba(255, 255, 255, 0);
+        }
+      }
+    }
+  }
+
+  .card-slider-card {
+    margin-left: 16px;
+
+    @media screen and (min-width: 500px) {
+      display: flex !important;
+      justify-content: center;
+      align-items: center;
+    }
+    
+    &:first-child {
+      margin-left: 24px;
+    }
+  }
+}
+
+.page-detail {
+  .actions-header {
+    padding: 20px 26px;
+    display: flex;
+    justify-content: space-between;
+    background-color: $action-header-background;
+    border-radius: inherit;
+
+    .action-name {
+      margin-top: 7px;
+
+      &.freeze-card {
+        min-width: 52px;
+      }
+
+      &.set-spend-limit {
+        min-width: 60px;
+      }
+
+      &.add-to-gpay {
+        min-width: 40px;
+      }
+
+      &.replace-card {
+        min-width: 48px;
+      }
+
+      &.cancel-card {
+        min-width: 40px;
+      }
+    }
+  }
+
+  .page-detail-content {
+    padding: 24px;
+
+    .recent-transaction {
+      padding: 10px;
+      width: 100%;
+      color: $text-highlight;
+      font-size: $font-size-text-label;
+      font-weight: 700;
+      background-color: $cards-background-secondary;
+      border: 1px solid $cards-border-secondary;
+      border-radius: 8px;
+      text-align: center;
+      margin-top: -8px;
+    }
+  }
+  margin-bottom: -56px;
+}
+
+.input-modal {
+  width: 300px;
+  .input-modal-header{
+    font-size: $font-size-title;
+    font-weight: 700;
+  }
+  .input-modal-info{
+    margin-top: 16px;
+  }
+  input {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+  .input-modal-action-button {
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+  }
+}

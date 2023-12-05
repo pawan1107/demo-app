@@ -1,0 +1,122 @@
+@import '../../../colors.scss';
+@import '../../../styles.scss';
+
+.card {
+  width: 358px;
+  height: 246px;
+  position: relative;
+  display: inline-flex;
+  align-items: flex-end;
+    
+  &[data-freeze="true"] {
+    cursor: default;
+    opacity: 0.4;
+    pointer-events:none;
+  }
+
+  .show-card-button{
+    position: absolute;
+    top: 0;
+    right: 0;
+    border: none;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: flex-start;
+
+    width: max-content;
+    height: 40px;
+    border-radius: 6px 6px 0px 0px;
+    font-size: 12px;
+    line-height: 20px;
+    color: $text-highlight;
+    background-color: $backgound-white;
+    padding: 5px 10px;
+
+    
+  
+    .eye {
+      fill: $text-highlight;
+      height: 20px;
+    }
+    .show-card-number{
+      margin-left: 6px;
+    }
+  }
+
+  .card-container {
+    z-index: 2;
+    height: 220px;
+    width: 358px;
+    border-radius: 12px 12px 12px 12px;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    color: $text-primary;
+    background-color: $cards-backgound-primary;
+    justify-content: center;
+    font-weight: 700;
+  
+    .card-logo {
+      display: flex;
+      justify-content: flex-end;
+    }
+  
+    .card-name {
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      margin-top: 24px;
+      font-size: $font-size-title;
+    }
+  
+    .card-number {
+      margin-top: 24px;
+      font-size: 14px;
+      letter-spacing: 3.5px;
+  
+      .card-number-chunks {
+        margin-right: 24px;
+      }
+  
+      .hidden-circle {
+        height: 8px;
+        width: 8px;
+        background-color: $text-primary;
+        display: inline-flex;
+        margin-right: 4px;
+        border-radius: 50%;
+      }
+      .card-number-chunks:last-child .hidden-circle:last-child {
+        margin-right: 0;
+      }
+    }
+  
+    .card-validity-cvv {
+      margin-top: 13px;
+      font-size: $font-size-text-label;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+  
+      .card-validity {
+        margin-right: 30px;
+        letter-spacing: 1.56px;
+      }
+      .card-cvv {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        letter-spacing: 0.31px;
+        position: relative;
+      }
+      .card-cvv-hide {
+        position: absolute;
+        top: -4px;
+        left: 34px;
+        font-size: 24px;
+        align-self: flex-end;
+        letter-spacing: 2.88px;
+      }
+    }
+  }
+}

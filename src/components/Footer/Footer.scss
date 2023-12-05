@@ -1,0 +1,40 @@
+@import '../../colors.scss';
+@import '../../styles.scss';
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  display: flex;
+  flex-direction: row;
+  padding: 8px;
+  height: 56px;
+  width: 100%;
+  justify-content: space-around;
+  background-color: $backgound-white;
+  box-shadow: 0 -3pt 6pt 0 #00000014;
+  backdrop-filter: blur(6px);
+
+  .footer-nav{
+    text-decoration: none;
+    width: max-content;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    color: $text-inactive;
+    font-size: $text-size-footer;
+
+    svg {
+      margin-bottom: 4px;
+      height: 24px;
+      width: 24px;
+      fill: $text-inactive;
+    }
+
+    &[data-active="true"] {
+      color: $text-highlight;
+      svg {
+          fill: $text-highlight;
+        }
+    }
+  }
+}

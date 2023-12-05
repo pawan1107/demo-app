@@ -1,0 +1,33 @@
+@import '../../../colors.scss';
+@import '../../../styles.scss';
+
+.section-header {
+  color: $text-primary;
+  font-size: $font-size-text-label;
+  height: 24px;
+  line-height: 20px;
+  &[data-active="false"] {
+    opacity: 0.5;
+  }
+  &[data-active="true"] {
+    border-bottom: 2px solid $buttons-secondary;
+  }
+}
+
+.section-header-list {
+  height: 24px;
+  padding: 0px 24px;
+  display: flex;
+  flex-direction: row;
+  .section-header {
+    margin-right: 33px;
+  }
+
+  .section-header:last-child {
+    margin-right: 0px;
+  }
+}
+
+.section-content {
+  margin-top: 24px;
+}

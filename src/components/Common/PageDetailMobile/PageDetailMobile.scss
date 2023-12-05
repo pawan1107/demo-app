@@ -1,0 +1,13 @@
+@import '../../../colors.scss';
+@import '../../../styles.scss';
+
+.page-detail-mobile {
+  position: absolute;
+  background-color: $backgound-white;
+  width: 100%;
+  border-radius: 24px 24px 0px 0px;
+
+  .space-bottom {
+    height: 56px;
+  }
+}

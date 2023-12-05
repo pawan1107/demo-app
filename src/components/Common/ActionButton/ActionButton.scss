@@ -1,0 +1,18 @@
+@import '../../../colors.scss';
+@import '../../../styles.scss';
+
+.action-button {
+  font-size: $font-size-text-label;
+  color: $buttons-primary-text;
+  
+  border: none;
+  outline: none;
+  background: none;
+  cursor: pointer;
+  align-items: center;
+  display: flex;
+  width: min-content;
+  flex-direction: column;
+  padding: 0;
+
+}

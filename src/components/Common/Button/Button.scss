@@ -1,0 +1,16 @@
+@import '../../../colors.scss';
+@import '../../../styles.scss';
+
+.button-style {
+  padding: 8px;
+  font-size: $font-size-text-label;
+  color: $buttons-secondary;
+  
+  border: none;
+  outline: none;
+  background: none;
+  line-height: 1;
+  cursor: pointer;
+  align-items: center;
+  display: flex;
+}
