@@ -139,19 +139,11 @@ const CardsSection = () => {
   const amount = 3000;
   const dispatch = useAppDispatch();
   const sectionRef = useRef<HTMLDivElement>(null);
-  const detailRef = useRef<HTMLDivElement>(null);
   const [offestTop, setOffestTop] = useState<number>();
-  const [offestBottom, setOffestBottom] = useState<number>();
   const [_, detailOpenClose] = useState<boolean>();
 
   useEffect(() => {
-    if ((sectionRef.current?.offsetHeight || 0) < (detailRef.current?.offsetHeight || 0)) {
-      setOffestTop(sectionRef.current?.offsetHeight);
-      setOffestBottom(undefined)
-    }  else {
-      setOffestTop(undefined);
-      setOffestBottom(10)
-    }
+    setOffestTop(sectionRef.current?.offsetHeight || 0);
   }, [_])
   const { allCards, currentCard } = useAppSelector((state) => state.cards);
   const freezeCard = () => dispatch(allCardsAction.toggleFreeze());
@@ -177,7 +169,7 @@ const CardsSection = () => {
           <CardSlider />
         </SectionList>
       </div>
-      <PageDetailMobile className='page-detail' style={{ top: offestTop && `${offestTop}px`}} ref={detailRef}>
+      <PageDetailMobile className='page-detail' style={{ top: `${offestTop}px`}}>
         <div className='actions-header'>
             <ActionButton onClick={freezeCard}>
               <FreezeCardIcon />
