@@ -10,6 +10,4 @@ npm run dev
 Note: Only Mobile View is supported. Only open in Mobile View.
 
 
-[Click here to view the Deploy Preview](https://master--superb-moonbeam-759582.netlify.app/cards)
-
-
+[Click here to view the Deploy Preview](https://656e983f6ed5cb009b82d93f--aspire-demo.netlify.app/)
