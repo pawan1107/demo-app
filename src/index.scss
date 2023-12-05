@@ -1,16 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap');
 @import './colors.scss';
 
-body {
+html, body {
   box-sizing: border-box;
   font-family: 'Open Sans', sans-serif;
   background-color: $base-background;
   margin: 0px;
-  margin-top: 24px;
+  height: 100vh;
+  width: 100vw;
 
-    height: 99vh;
-    width: 100vw;
-
+  & body {
+    margin-top: 24px;
+  }
 
   .app {
     position: relative;
