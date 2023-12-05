@@ -10,4 +10,4 @@ npm run dev
 Note: Only Mobile View is supported. Only open in Mobile View.
 
 
-[Click here to view the Deploy Preview](https://656e983f6ed5cb009b82d93f--aspire-demo.netlify.app/)
+[Click here to view the Deploy Preview](https://master--aspire-demo.netlify.app/)
