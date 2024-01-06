@@ -1,7 +1,6 @@
 ## How to use
 
-Download the example [or clone the repo](https://github.com/mui/material-ui):
-Install it and run:
+Download the example or clone the repo then run:
 
 ```bash
 npm install
@@ -9,5 +8,3 @@ npm run dev
 ```
 Note: Only Mobile View is supported. Only open in Mobile View.
 
-
-[Click here to view the Deploy Preview](https://master--aspire-demo.netlify.app/)
